@@ -1,15 +1,19 @@
 # Webp to PNG
 
 ## Disclaimer
+
 This is a quick hack I've created for a personal use case. It probably sucks in a lot of ways, but works for me. Handle with care :)
 
 ## Setup
-Run `go mod tidy`.
+
+Run `cargo build`.
 
 ## Usage
-Place `.webp` images in `./src/` and run
+
+Place desired images in `./input/` directory and run
 
 ```
-go run .
+cargo run
 ```
-to convert them to `.png` files in the `./output/` directory.
+
+to convert them to `.png` files with a max-{width,height} of 512px in the `./output/` directory, removing the original source file.
